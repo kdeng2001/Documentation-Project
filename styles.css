@@ -1,0 +1,87 @@
+@media (min-width: 400px) {}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    background-color: rgb(106, 123, 139);
+    color: rgb(226, 226, 159);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header{
+    font-size: 3.5rem;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h1, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#navbar {
+    height: 100%;
+}
+
+li {
+    width: 100%;
+    height: 10%;
+    font-size: 1.75rem;
+    border-top: 2px solid rgb(83, 83, 83);
+    
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    padding: 2rem;
+}
+
+.title {
+    padding: 2rem;
+}
+
+ul {
+    display: flex;
+    flex-direction:column;
+    list-style-type: none;
+    height: 100%;
+}
+
+main {
+    display: flex;
+}
+
+.left {
+    position: fixed;
+    border: 2px solid rgb(83, 83, 83);
+    border-top: none;
+    height: 100%;
+}
+
+.right {
+    position: absolute;
+    left: 50rem;
+}
+
+p {
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 2rem;
+    color: rgb(228, 228, 186);
+    padding: 1rem;
+}
+
+section {
+    margin: 2rem;
+}
