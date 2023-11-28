@@ -17,9 +17,9 @@
                 <ul>
                     <li class="nav-text"><a class="nav-link" href="#Introduction">Introduction</a></li>
                     <li class="nav-text"><a class="nav-link" href="#Flexbox">Flexbox</a></li>
-                    <li class="nav-text"><a class="nav-link" href="#Header_3">Header 3</a></li>
-                    <li class="nav-text"><a class="nav-link" href="#Header_4">Header 4</a></li>
-                    <li class="nav-text"><a class="nav-link" href="#Header_5">Header 5</a></li>
+                    <li class="nav-text"><a class="nav-link" href="#Flex_Items">Flex Items</a></li>
+                    <li class="nav-text"><a class="nav-link" href="#Grid">Grid</a></li>
+                    <li class="nav-text"><a class="nav-link" href="#Conclusion">Conclusion</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,14 +31,14 @@
                     In CSS, properties are used to style HTML content. One such property is <b>display</b>. 
                     Two commonly used values for this property are <b>Flexbox</b> and <b>Grid</b>. By setting display to either of these values,
                     the developer can adjust the layout of content through additional styling properties that depend on the display property's value. 
-                    Though they are Flexbox or Grid are different methods, it is possible to achieve the similar styling results with either value.
+                    Though Flexbox or Grid are different methods, it is possible to achieve the similar styling results with either display value.
                     By the end of this documentation, you will have learned the basics of using Flexbox and Grid.
                 </p>
                 <p>
                     To understand using Flexbox and Grid, we should understand the two basic layout methods. They are <b>Block</b> and <b>Inline</b>.
                     The Block layout method orients elements from <b>top to bottom</b>, while the Inline method orients elements from <b>left to right</b>. 
                     Certain HTML elements apply these methods by default. For example the <b>list item</b> element has the Block layout by default. 
-                    However, these methods can also be set using the display property. 
+                    However, these methods can also be manually set with the display property. 
                 </p>
                 <code>
                     li {
@@ -55,7 +55,7 @@
                     Child elements of the flex container become flex items.
                 </p>
                 <p>
-                    Some other important properties for flex:
+                    Another important property for flex:
                     <ol>
                         <li class="property-text">
                             flex-wrap:
@@ -68,53 +68,175 @@
                                 the same properties. 
                             </p>
                         </li>
+                    </ol>
+                </p>
+                <code>
+                    .flex-container {
+                        flex-wrap: nowrap;
+                    }
+                </code>
+            </section>
+            <section class="main-section" id="Flex_Items">
+                <header>Flex Items</header>
+                <p>Here's some more important properties of flex. These apply to flex-items, and should be placed there.</p>
+                <p>
+                    <ol>
                         <li class="property-text">
                             flex-grow:
                             <p>
-                                TODO
+                                This property determines how much of the flex container's remaining space should be assigned to the flex item's main size.
+                                Flex-grow is particularly useful when the sum of the container items' size is smaller than the size of the container.
+                                Flex-grow is set inside the flex item. It's default value is 0. 
                             </p>
                         </li>
                         <li class="property-text">
                             flex-shrink:
                             <p>
-                                TODO
+                                This property determines how and which flex items shrink when the sum of all flex items' size is greater than the flex containers' dimensions.
+                                Like flex-grow, it's set inside the flex item and has a default value of 0.
                             </p>
                         </li>                        
                         <li class="property-text">
                             flex-basis:
                             <p>
-                                TODO
+                                This property sets the initial size of the flex item.
                             </p>
                         </li>
                         <li class="property-text">
                             flex:
                             <p>
                                 This property is shorthand for <b>flex-grow</b>, <b>flex-shrink</b>, and <b>flex-basis</b> in this order.
+                                Using this property can help reduce the number of lines used, and ensure each value is set.
                             </p>
                         </li>
                     </ol>
-                </p>
-                <code>
-                    Code1
+             </p>
+                <code>                 
+                    .flex-item {
+                    flex: 1, 0, 200px;
+                }
                 </code>
             </section>
-            <section class="main-section" id="Header_3">
-                <header>Header 3</header>
-                <p>Paragraph 1</p>
-                <p>Paragraph 2</p>
-                <code>Code1</code>
+            <section class="main-section" id="Grid">
+                <header>Grid</header>
+                <p>
+                    Grids work similar to tables, but offer more varied layouts through properties set in child elements.
+                    There are many grid properties. These can influence all rows and columns or
+                    dimensions and behaviors of boxes of the grid, or (row number, column number). 
+                </p>
+                <p>
+                    Here are some of the grid properties.
+                    <ol>
+                        <li class="property-text">
+                            grid-template-columns
+                            <p>
+                            </p>
+                        </li>
+                        <li class="property-text">
+                            grid-template-rows
+                            <p>
+                            </p>
+                        </li>
+                        <li class="property-text">
+                            grid-template-areas
+                            <p>
+                            </p>
+                        </li>
+                        <li class="property-text">
+                            grid-auto-columns
+                            <p>
+                            </p>
+                        </li>
+                        <li class="property-text">
+                            grid-auto-rows
+                            <p>
+                            </p>
+                        </li>
+                        <li class="property-text">
+                            grid-auto-flow
+                            <p>
+                            </p>
+                        </li>
+                        <li class="property-text">
+                            grid:
+                            <p>
+                                Shorthand for the above.
+                            </p>
+                        </li>
+                    </ol>
+                    </p>
+                    <p>
+                        The grid properties below apply to boxes of a grid.
+                        <ol>
+                            <li class="property-text">
+                                grid-row-start
+                                <p>
+                                </p>
+                            </li>
+                            <li class="property-text">
+                                grid-column-start
+                                <p>
+                                </p>
+                            </li>
+                            <li class="property-text">
+                                grid-row-end
+                                <p>
+                                </p>
+                            </li>
+                            <li class="property-text">
+                                grid-column-end
+                                <p>
+                                </p>
+                            </li>
+                            <li class="property-text">
+                                grid-row
+                                <p>
+                                </p>
+                            </li>
+                            <li class="property-text">
+                                grid-column
+                                <p>
+                                </p>
+                            </li>
+                            <li class="property-text">
+                                grid-area
+                                <p>
+                                </p>
+                            </li>
+                            <li class="property-text">
+                                row-gap
+                                <p>
+                                </p>
+                            </li>
+                            <li class="property-text">
+                                column-gap
+                                <p>
+                                </p>
+                            </li>
+                            <li class="property-text">
+                                gap
+                                <p>
+                                </p>
+                            </li>
+                        </ol>
+                </p>
+                <code>
+                    .grid-container {
+                        display: grid;
+                    }
+                </code>
             </section>
-            <section class="main-section" id="Header_4">
-                <header>Header 4</header>
-                <p>Paragraph 1</p>
-                <p>Paragraph 2</p>
-                <code>Code1</code>
-            </section>
-            <section class="main-section" id="Header_5">
-                <header>Header 5</header>
-                <p>Paragraph 1</p>
-                <p>Paragraph 2</p>
-                <code>Code1</code>
+            <section class="main-section" id="Conclusion">
+                <header>Conclusion</header>
+                <p>
+                    Hopefully, these notes help you understand the how and when to use Grid and Flex.
+                    After all, Grid and Flex are some of the more powerful built-in features of CSS.
+                </p>
+                <p>
+                    Please refer to documentation <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout">here</a> on grids.
+                    and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">here</a> on flexbox.
+                </p>
+                <code>Thanks for reading, and happy coding!!!</code>
             </section>
         </div>
     </main>
